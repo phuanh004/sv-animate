@@ -14,7 +14,6 @@ This repository contains a collection of animations build using Svelte 5, Tailwi
 
 - Goal is to port above mentioned UI libraries to Svelte and provide better experience to Svelte developers.
 
+## Feedback
 
-## Features
-- Dark & Light Mode
-
+If you have any feedback, please reach out to us on [Twitter](https://x.com/Sikandar_Bhide) or [Discord](https://discord.gg/JDrvAppV).
