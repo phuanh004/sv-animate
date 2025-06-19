@@ -1,12 +1,14 @@
 <script lang="ts">
-	import CardBody from '$lib/components/sv/indie/cards/simple/CardBody.svelte';
-	import VariantTwo from '$lib/components/sv/indie/cards/with-pattern/variant-two.svelte';
+	import BorderBeamExamples from '$lib/components/examples/magic/border-beam-examples.svelte';
+	import MarqueeExample from '$lib/components/examples/magic/marquee-example.svelte';
+	import MeteorsExample from '$lib/components/examples/magic/meteors-example.svelte';
+	import ShineBorderExample from '$lib/components/examples/magic/shine-border-example.svelte';
+	import AnimatedShinyText from '$lib/components/sv/magic/animated-shiny-text/AnimatedShinyText.svelte';
 </script>
 
-<div class="flex min-h-[60vh] items-center justify-center">
-	<div>
-		<VariantTwo>
-			<CardBody />
-		</VariantTwo>
-	</div>
+<div class="flex h-screen items-center justify-center">
+	<AnimatedShinyText />
 </div>
+
+<style>
+</style>
