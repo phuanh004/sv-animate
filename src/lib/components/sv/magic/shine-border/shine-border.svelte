@@ -36,7 +36,7 @@
     style="
         --border-width: {borderWidth}px;
         --border-radius: {borderRadius}px;
-        --shine-pulse-duration: {duration}s;
+        --duration: {duration}s;
         --mask-linear-gradient: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
         --background-radial-gradient: radial-gradient(transparent, transparent, {Array.isArray(
       color
@@ -44,7 +44,7 @@
       ? color.join(',')
       : color}, transparent, transparent);
       "
-    class="before:bg-shine-size before:absolute before:inset-0 before:aspect-square before:size-full before:rounded-[var(--border-radius)] before:p-[var(--border-width)] before:will-change-[background-position] before:content-[''] before:![-webkit-mask-composite:xor] before:![mask-composite:exclude] before:[background-image:var(--background-radial-gradient)] before:[background-size:300%_300%] before:[mask:var(--mask-linear-gradient)] motion-safe:before:animate-[shine-pulse_var(--shine-pulse-duration)_infinite_linear]"
+    class="before:bg-shine-size before:absolute before:inset-0 before:aspect-square before:size-full before:rounded-[var(--border-radius)] before:p-[var(--border-width)] before:will-change-[background-position] before:content-[''] before:![-webkit-mask-composite:xor] before:![mask-composite:exclude] before:[background-image:var(--background-radial-gradient)] before:[background-size:300%_300%] before:[mask:var(--mask-linear-gradient)] motion-safe:before:animate-shine-pluse"
   ></div>
   <!-- This is Default Slot -->
   {#if children}{@render children()}{:else}Default{/if}
