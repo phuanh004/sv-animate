@@ -1,9 +1,10 @@
 <script lang="ts">
+	import BlurFadeExample from '$lib/components/examples/magic/text-fade-example.svelte';
 	import ShineBorderExample from '$lib/components/examples/magic/shine-border-example.svelte';
 </script>
 
 <div class="flex h-screen items-center justify-center">
-	<ShineBorderExample />
+	<BlurFadeExample />
 </div>
 
 <style>

@@ -40,6 +40,9 @@
 		]
 	},
 	"dependencies": {
-		"mode-watcher": "^1.0.7"
+		"mode-watcher": "^1.0.7",
+		"motion-start": "^0.1.15",
+		"shiki": "^3.7.0",
+		"svelte-inview": "^4.0.4"
 	}
 }

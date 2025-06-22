@@ -1,0 +1,1 @@
+Svelte Magic UI

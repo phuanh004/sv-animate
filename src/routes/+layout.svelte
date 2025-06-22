@@ -7,5 +7,5 @@
 </script>
 
 <ModeWatcher defaultMode='dark' />
-<!-- <Navbar /> -->
+<Navbar />
 {@render children()}

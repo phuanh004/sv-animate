@@ -8,9 +8,10 @@
 	import type { HTMLAttributes } from 'svelte/elements';
 	let navs = [
 		{ name: 'Home', url: '/' },
-		{ name: 'About', url: '/about' },
-		{ name: 'Blog', url: '/blog' },
-		{ name: 'Contact', url: '/contact' }
+		{ name: 'Svelte Magic UI', url: '/magic' },
+		{ name: 'Svelte Aceternity UI', url: '/a' },
+		{ name: 'Svelte Indie UI', url: '/in' },
+		{ name: 'Svelte Luxe UI', url: '/luxe' }
 	];
 	let url_param = $state(page.url.pathname.split('/')[1]);
 
@@ -21,30 +22,31 @@
 
 	const components: { title: string; href: string; description: string }[] = [
 		{
-			title: 'Magic UI',
-			href: '/docs/primitives/hover-card',
-			description: 'For sighted users to preview content available behind a link.'
+			title: 'Svelte Magic UI',
+			href: '/magic',
+			description: '50+ free and open-source animated components and effects'
 		},
 		{
-			title: 'Aceternity UI',
-			href: '/docs/primitives/alert-dialog',
+			title: 'Svelte Aceternity UI',
+			href: '/a',
+			description: 'Copy paste the most trending components and use them in your websites.'
+		},
+		{
+			title: 'Svelte Luxe UI',
+			href: '/luxe',
 			description:
-				'A modal dialog that interrupts the user with important content and expects a response.'
+				'Library of copy and paste components to illuminate your applications with elegance and sophistication.'
 		},
 		{
-			title: 'Luxe UI',
-			href: '/docs/primitives/hover-card',
-			description: 'For sighted users to preview content available behind a link.'
-		},
-		{
-			title: 'Indie UI',
-			href: '/indie/',
-			description: 'For sighted users to preview content available behind a link.'
+			title: 'Svelte Indie UI',
+			href: '/indie',
+			description: 'Make your website stand out with minimal effort.'
 		},
 		{
 			title: 'Motion Start Examples',
-			href: '/docs/primitives/hover-card',
-			description: 'For sighted users to preview content available behind a link.'
+			href: '/motion-start',
+			description:
+				'A powerful animation library and developer tool suite for making beautiful animations and effects.'
 		}
 	];
 
@@ -55,7 +57,7 @@
 	};
 </script>
 
-<nav class="bg-background">
+<nav class="sticky top-0 z-50 border-b bg-transparent backdrop-blur-sm">
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="flex h-16 items-center justify-between">
 			<div class="flex items-center">
@@ -80,7 +82,7 @@
 					<!-- Desktop Navigation menu -->
 					<NavigationMenu.Root>
 						<NavigationMenu.List>
-							<NavigationMenu.Item>
+							<!-- <NavigationMenu.Item>
 								<NavigationMenu.Trigger>Getting started</NavigationMenu.Trigger>
 
 								<NavigationMenu.Content>
@@ -133,13 +135,13 @@
 										})}
 									</ul>
 								</NavigationMenu.Content>
-							</NavigationMenu.Item>
+							</NavigationMenu.Item> -->
 
 							<NavigationMenu.Item>
 								<NavigationMenu.Trigger>Components</NavigationMenu.Trigger>
 
 								<NavigationMenu.Content>
-									<ul class="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+									<ul class="grid w-[400px] gap-3 p-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
 										{#each components as component, i (i)}
 											{@render ListItem({
 												href: component.href,
@@ -206,8 +208,12 @@
 			<div class="space-y-1 px-2">
 				<!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
 				{#each navs as nav}
-					<a href={nav.url} class="block rounded-md px-3 py-2 text-base font-medium text-gray-300"
-						>{nav.name}</a
+					<a
+						href={nav.url}
+						onclick={() => {
+							isMobileMenu = false; // Close the menu on click
+						}}
+						class="text-primary block rounded-md px-3.5 py-1.5 text-sm">{nav.name}</a
 					>
 				{/each}
 			</div>
@@ -261,7 +267,11 @@
 {#snippet socials()}
 	<div class="flex items-center space-x-0.5">
 		<!-- Gihub -->
-		<Button size="icon" variant="ghost"
+		<Button
+			target="_blank"
+			href="https://github.com/SikandarJODD/sv-animate"
+			size="icon"
+			variant="ghost"
 			><svg
 				viewBox="0 0 256 250"
 				width="256"
@@ -276,7 +286,7 @@
 			</svg></Button
 		>
 		<!-- Twitter  -->
-		<Button size="icon" variant="ghost"
+		<Button href="https://x.com/Sikandar_Bhide" target="_blank" size="icon" variant="ghost"
 			><svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="1200"
@@ -304,7 +314,7 @@
 					)}
 					{...restProps}
 				>
-					<div class="text-sm leading-none font-medium">{title}</div>
+					<div class="text-sm leading-none font-semibold">{title}</div>
 					<p class="text-muted-foreground line-clamp-2 text-sm leading-snug">
 						{content}
 					</p>
