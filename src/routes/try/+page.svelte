@@ -1,12 +1,11 @@
 <script lang="ts">
-	import CardBody from '$lib/components/sv/indie/cards/simple/CardBody.svelte';
-	import VariantTwo from '$lib/components/sv/indie/cards/with-pattern/variant-two.svelte';
+	import BlurFadeExample from '$lib/components/examples/magic/text-fade-example.svelte';
+	import ShineBorderExample from '$lib/components/examples/magic/shine-border-example.svelte';
 </script>
 
-<div class="flex min-h-[60vh] items-center justify-center">
-	<div>
-		<VariantTwo>
-			<CardBody />
-		</VariantTwo>
-	</div>
+<div class="flex h-screen items-center justify-center">
+	<BlurFadeExample />
 </div>
+
+<style>
+</style>
