@@ -119,6 +119,9 @@
 	--animate-border-beam: border-beam calc(var(--duration) * 1s) linear infinite;
 	--animate-meteor: meteor 5s linear infinite;
 	--animate-shine-pluse: shine-pluse var(--duration) infinite linear;
+	--animate-grid: grid 1s ease-in-out infinite alternate;
+	--animate-ripple: ripple var(--duration, 2s) ease calc(var(--1, 0) * 0.2s) infinite;
+
 	/* All Magic UI keyframes  */
 	@keyframes shimmer {
 		0% {
@@ -185,6 +188,26 @@
 			background-position: 0 0;
 		}
 	}
+
+	@keyframes grid {
+		0% {
+			transform: translateY(-50%);
+		}
+		100% {
+			transform: translateY(0);
+		}
+	}
+
+	@keyframes ripple {
+		0%,
+		100% {
+			transform: translate(-50%, -50%) scale(1);
+		}
+		,
+		50% {
+			transform: translate(-50%, -50%) scale(0.9);
+		}
+	}
 }
 
 @layer base {
@@ -195,4 +218,3 @@
 		@apply bg-background text-foreground;
 	}
 }
-
