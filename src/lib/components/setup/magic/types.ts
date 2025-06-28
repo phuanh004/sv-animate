@@ -2,13 +2,13 @@ export type MagicComponent = {
 	id?: string;
 	name: string;
 	desc: string;
-	code: Code | Code[];
-	component?: any;
+	code: Code | Code[]; // Code for the component
+	component?: any; // Main Component
 	link?: string;
 	class?: string;
 	showGrid?: boolean;
 	previewComp?: any; // Example Preivew Component
-	previewCode?: string | Code[]; // Code for the preview component
+	previewCode?: Code | Code[]; // Code for the preview component
 	examples?: ExampleComponent[];
 	tailwind?: string;
 	showDots?: boolean;
@@ -21,10 +21,10 @@ export type Code = {
 };
 
 export type ExampleComponent = {
-	id: number;
-	name: string;
-	fileName: string;
-	code: string | Code[];
+	id?: number;
+	name?: string;
+	fileName?: string;
+	code: Code | Code[];
 	component: any;
 	class?: string;
 	showGrid?: boolean;

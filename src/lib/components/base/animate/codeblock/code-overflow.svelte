@@ -24,7 +24,7 @@
 	{...props}
 	data-code-overflow
 	data-collapsed={collapsed}
-	class={cn('relative overflow-y-hidden data-[collapsed=true]:max-h-[300px]', className)}
+	class={cn('relative overflow-y-hidden data-[collapsed=true]:max-h-[300px] transition-all duration-200', className)}
 >
 	{@render children?.()}
 	{#if collapsed}
@@ -40,6 +40,15 @@
 			onclick={state.toggleCollapsed}
 		>
 			Expand
+		</Button>
+	{:else}
+		<Button
+			variant="secondary"
+			size="sm"
+			class="absolute bottom-6 left-1/2 z-20 w-fit -translate-x-1/2"
+			onclick={state.toggleCollapsed}
+		>
+			Collapse
 		</Button>
 	{/if}
 </div>
