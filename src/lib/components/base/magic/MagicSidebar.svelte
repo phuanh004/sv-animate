@@ -28,10 +28,10 @@
 			id: 5,
 			heading: 'Components',
 			sub: [
-				{
-					name: 'Hero Video Dialog',
-					link: '/magic/hero-video-dialog'
-				},
+				// {
+				// 	name: 'Hero Video Dialog',
+				// 	link: '/magic/hero-video-dialog'
+				// },
 				{
 					name: 'Orbiting Circles',
 					link: '/magic/orbiting-circles'
@@ -40,59 +40,59 @@
 					name: 'Marquee',
 					link: '/magic/marquee'
 				},
-				{
-					name: 'Bento Grid',
-					link: '/magic/bento-grid'
-				},
-				{
-					name: 'Simple Cards',
-					link: '/magic/simple-cards'
-				},
-				{
-					name: 'Animated Beam',
-					link: '/magic/animated-beam'
-				},
+				// {
+				// 	name: 'Bento Grid',
+				// 	link: '/magic/bento-grid'
+				// },
+				// {
+				// 	name: 'Simple Cards',
+				// 	link: '/magic/simple-cards'
+				// },
+				// {
+				// 	name: 'Animated Beam',
+				// 	link: '/magic/animated-beam'
+				// },
 				{
 					name: 'File Tree',
 					link: '/magic/file-tree'
 				},
-				{
-					name: 'Globe',
-					link: '/magic/globe'
-				},
-				{
-					name: 'Dock Menu',
-					link: '/magic/dock'
-				},
-				{
-					name: 'Circular Progress Bar',
-					link: '/magic/circular-progress-bar'
-				},
-				{
-					name: 'Features',
-					link: '/magic/features'
-				}
-			]
-		},
-		{
-			id: 8,
-			heading: 'Device Mocks',
-			sub: [
-				{
-					name: 'Safari',
-					link: '/magic/safari'
-				},
-				{
-					name: 'iPhone 15 Pro',
-					link: '/magic/iphone15-pro'
-				}
 				// {
-				//   name: "Android",
-				//   link: "/magic/android",
-				//   isNew: true,
+				// 	name: 'Globe',
+				// 	link: '/magic/globe'
 				// },
+				// {
+				// 	name: 'Dock Menu',
+				// 	link: '/magic/dock'
+				// },
+				// {
+				// 	name: 'Circular Progress Bar',
+				// 	link: '/magic/circular-progress-bar'
+				// },
+				// {
+				// 	name: 'Features',
+				// 	link: '/magic/features'
+				// }
 			]
 		},
+		// {
+		// 	id: 8,
+		// 	heading: 'Device Mocks',
+		// 	sub: [
+		// 		{
+		// 			name: 'Safari',
+		// 			link: '/magic/safari'
+		// 		},
+		// 		{
+		// 			name: 'iPhone 15 Pro',
+		// 			link: '/magic/iphone15-pro'
+		// 		}
+		// 		{
+		// 		  name: "Android",
+		// 		  link: "/magic/android",
+		// 		  isNew: true,
+		// 		},
+		// 	]
+		// },
 		{
 			id: 6,
 			heading: 'Special Effects',
@@ -109,14 +109,14 @@
 					name: 'Shine Border',
 					link: '/magic/shine-border'
 				},
-				{
-					name: 'Cool Mode',
-					link: '/magic/cool-mode'
-				},
-				{
-					name: 'Magic Card',
-					link: '/magic/magic-card'
-				},
+				// {
+				// 	name: 'Cool Mode',
+				// 	link: '/magic/cool-mode'
+				// },
+				// {
+				// 	name: 'Magic Card',
+				// 	link: '/magic/magic-card'
+				// },
 				{
 					name: 'Particles',
 					link: '/magic/particles'
@@ -153,10 +153,10 @@
 					name: 'Grid Pattern',
 					link: '/magic/grid-pattern'
 				},
-				{
-					name: 'Background Boxes',
-					link: '/magic/bg-boxes'
-				},
+				// {
+				// 	name: 'Background Boxes',
+				// 	link: '/magic/bg-boxes'
+				// },
 				{
 					name: 'Retro Grid',
 					link: '/magic/retro-grid'
@@ -179,14 +179,14 @@
 					name: 'Pulsating Button',
 					link: '/magic/pulsating-button'
 				},
-				{
-					name: 'Animated Subscribe',
-					link: '/magic/animated-subscribe'
-				},
-				{
-					name: 'Ripple Button',
-					link: '/magic/ripple-button'
-				},
+				// {
+				// 	name: 'Animated Subscribe',
+				// 	link: '/magic/animated-subscribe'
+				// },
+				// {
+				// 	name: 'Ripple Button',
+				// 	link: '/magic/ripple-button'
+				// },
 				{
 					name: 'Rainbow',
 					link: '/magic/rainbow'
@@ -201,18 +201,18 @@
 			id: 4,
 			heading: 'Text Animations',
 			sub: [
-				{
-					name: 'Aurora Text',
-					link: '/magic/aurora-text'
-				},
-				{
-					name: 'Text Reveal',
-					link: '/magic/text-reveal'
-				},
-				{
-					name: 'Number Ticker',
-					link: '/magic/number-ticker'
-				},
+				// {
+				// 	name: 'Aurora Text',
+				// 	link: '/magic/aurora-text'
+				// },
+				// {
+				// 	name: 'Text Reveal',
+				// 	link: '/magic/text-reveal'
+				// },
+				// {
+				// 	name: 'Number Ticker',
+				// 	link: '/magic/number-ticker'
+				// },
 				{
 					name: 'Animated Gradient Text',
 					link: '/magic/animated-gradient-text'
@@ -233,20 +233,20 @@
 					name: 'Gradual Spacing',
 					link: '/magic/gradual-spacing'
 				},
-				{
-					name: 'Spinning Text',
-					link: '/magic/spinning-text'
-				},
-				{
-					name: 'Video Text',
-					link: '/magic/video-text',
-					isNew: true
-				},
-				{
-					name: 'Smooth Cursor',
-					link: '/magic/smooth-cursor',
-					isNew: true
-				},
+				// {
+				// 	name: 'Spinning Text',
+				// 	link: '/magic/spinning-text'
+				// },
+				// {
+				// 	name: 'Video Text',
+				// 	link: '/magic/video-text',
+				// 	isNew: true
+				// },
+				// {
+				// 	name: 'Smooth Cursor',
+				// 	link: '/magic/smooth-cursor',
+				// 	isNew: true
+				// },
 				{
 					name: 'Letter Pull up',
 					link: '/magic/letter-pull-up'
@@ -267,10 +267,10 @@
 					name: 'Word Rotate',
 					link: '/magic/word-rotate'
 				},
-				{
-					name: 'Sparkles Text',
-					link: '/magic/sparkles-text'
-				}
+				// {
+				// 	name: 'Sparkles Text',
+				// 	link: '/magic/sparkles-text'
+				// }
 			]
 		}
 	];

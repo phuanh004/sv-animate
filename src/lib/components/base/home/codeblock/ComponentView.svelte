@@ -9,7 +9,6 @@
     class?: $$Props["class"];
     reRender?: boolean;
     children?: import('svelte').Snippet;
-    [key: string]: any
   }
 
   let { class: className = undefined, reRender = true, children, ...rest }: Props = $props();

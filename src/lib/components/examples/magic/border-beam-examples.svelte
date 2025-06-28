@@ -1,5 +1,5 @@
 <script>
-	import BorderBeam from '$lib/components/sv/magic/border-beam/border-beam.svelte';
+	import BorderBeam from '$lib/components/sv/magic/special-effects/border-beam/border-beam.svelte';
 </script>
 
 <article
