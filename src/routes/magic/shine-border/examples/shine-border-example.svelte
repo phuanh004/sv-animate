@@ -1,5 +1,5 @@
 <script>
-	import ShineBorder from "$lib/components/sv/magic/shine-border/shine-border.svelte";
+	import ShineBorder from "$lib/components/sv/magic/special-effects/shine-border/shine-border.svelte";
 
 	// Scroll below to see the original Component file
 </script>

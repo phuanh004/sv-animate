@@ -1,10 +1,10 @@
 export type MagicComponent = {
-	id: string;
+	id?: string;
 	name: string;
 	desc: string;
-	component?: any;
-	link: string;
 	code: Code | Code[];
+	component?: any;
+	link?: string;
 	class?: string;
 	showGrid?: boolean;
 	previewComp?: any; // Example Preivew Component
@@ -17,7 +17,9 @@ export type MagicComponent = {
 export type Code = {
 	filename: string;
 	filecode: string;
+	lang?: string;
 };
+
 export type ExampleComponent = {
 	id: number;
 	name: string;

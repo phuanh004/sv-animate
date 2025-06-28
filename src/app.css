@@ -141,13 +141,13 @@
 	--animate-border-beam: border-beam calc(var(--duration) * 1s) linear infinite;
 	--animate-meteor: meteor 5s linear infinite;
 	--animate-shine-pluse: shine-pluse var(--duration) infinite linear;
-	--animate-grid: grid 1s ease-in-out infinite alternate;
-	--animate-ripple: ripple var(--duration, 2s) ease calc(var(--1, 0) *0.2s) infinite;
+	--animate-grid: grid 15s ease-in-out infinite alternate;
+	--animate-ripple: ripple var(--duration, 2s) ease calc(var(--1, 0) * 0.2s) infinite;
 	--animate-spin-around: spin-around calc(var(--speed) * 2) infinite linear;
 	--animate-magic-slide: magic-slide var(--speed) ease-in-out infinite alternate;
 	--animate-gradient: gradient 6s linear infinite;
 	--animate-rainbow: rainbow var(--speed, 6s) linear infinite;
-	 --animate-pulse: pulse var(--duration) ease-out infinite;
+	--animate-pulse: pulse var(--duration) ease-out infinite;
 
 	/* All Magic UI keyframes  */
 	@keyframes shimmer {
@@ -270,10 +270,11 @@
 	}
 
 	@keyframes pulse {
-		0%, 100%{
+		0%,
+		100% {
 			box-shadow: 0 0 0 0 var(--pulse-color, rgba(255, 255, 255, 0.5));
 		}
-		50%{
+		50% {
 			box-shadow: 0 0 0 8px var(--pulse-color, rgba(255, 255, 255, 0));
 		}
 	}
