@@ -18,5 +18,20 @@ export let magic : MagicComponent={
     filename: 'shine-border.svelte',
     lang: 'svelte'
   },
-  component: ShineBorder
+  component: ShineBorder,
+  tailwind: `@theme inline {
+  --animate-shine-pluse: shine-pluse var(--duration) infinite linear;
+
+  @keyframes shine-pluse {
+		0% {
+			background-position: 0 0;
+		}
+		50% {
+			background-position: 100% 100%;
+		}
+		100% {
+			background-position: 0 0;
+		}
+	}
+}`
 }

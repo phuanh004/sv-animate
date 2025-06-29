@@ -12,12 +12,24 @@ export let magic: MagicComponent = {
 		filename: 'animated-shiny-text-example.svelte',
 		filecode: AnimatedShinyTextExampleCode,
 		lang: 'svelte',
-    isExpand: true,
+		isExpand: true
 	},
 	component: AnimatedShinyText,
 	code: {
 		filename: 'animated-shiny-text.svelte',
 		filecode: AnimatedShinyTextCode,
 		lang: 'svelte'
+	},
+	tailwind: `@theme inline {
+	--animate-shimmer: shimmer 2s infinite;
+
+	@keyframes shimmer {
+		0% {
+			background-position: calc(-100% - var(--shimmer-width)) 0;
+		}
+		100% {
+			background-position: calc(100% + var(--shimmer-width)) 0;
+		}
 	}
+}`
 };

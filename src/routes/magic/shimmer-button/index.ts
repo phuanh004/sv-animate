@@ -18,5 +18,17 @@ export let magic: MagicComponent = {
 		filecode: ShimmerButtonCode,
 		filename: 'shimmer-button.svelte',
 		lang: 'svelte'
+	},
+	tailwind: `@theme inline {
+	--animate-shimmer: shimmer 2s infinite;
+
+	@keyframes shimmer {
+		0% {
+			background-position: calc(-100% - var(--shimmer-width)) 0;
+		}
+		100% {
+			background-position: calc(100% + var(--shimmer-width)) 0;
+		}
 	}
+}`
 };

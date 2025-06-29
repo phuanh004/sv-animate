@@ -23,7 +23,7 @@
 		</ComponentTab>
 		<div bind:this={toc.ref} class="mt-10">
 			<SubTitle id="installation-{magic.name}">Installation</SubTitle>
-			<Desc>Copy the code below to your Svelte project to use the Words Pull Up animation.</Desc>
+			<Desc>Copy the code below to your Svelte project to use the {magic.name} animation.</Desc>
 			<div class="mb-20">
 				{#if Array.isArray(magic.code)}
 					{#each magic.code as codeItem (codeItem.filename)}
@@ -39,22 +39,37 @@
 						</Code.Root>
 					</Code.Overflow>
 				{/if}
-			</div>
-			<!-- Examples -->
-			{#if magic.examples}
-				<SubTitle id="examples-{magic.name}">Examples</SubTitle>
-				<div>
-					{#each magic.examples as item}
-						{@const ExampleComponent = item.component}
-						<SubTitle id={item.name} class=" md:text-xl">{item.name}</SubTitle>
-						<div class="mb-6">
-							<ComponentTab code={item.code} lang="svelte">
-								<ExampleComponent />
-							</ComponentTab>
+				{#if magic.tailwind}
+					<div class="mt-20">
+						<SubTitle id="tailwind-{magic.name}">Add Tailwind CSS</SubTitle>
+						<Desc
+							>To use this magic, you need to add below CSS inside <span
+								class="rounded-xs bg-teal-600/10 px-1 text-teal-500">app.css</span
+							> file</Desc
+						>
+						<div>
+							<Code.Root lang="css" code={magic.tailwind}>
+								<Code.CopyButton />
+							</Code.Root>
 						</div>
-					{/each}
-				</div>
-			{/if}
+					</div>
+				{/if}
+				<!-- Examples -->
+				{#if magic.examples}
+					<SubTitle id="examples-{magic.name}">Examples</SubTitle>
+					<div>
+						{#each magic.examples as item}
+							{@const ExampleComponent = item.component}
+							<SubTitle id={item.name} class=" md:text-xl">{item.name}</SubTitle>
+							<div class="mb-6">
+								<ComponentTab code={item.code} lang="svelte">
+									<ExampleComponent />
+								</ComponentTab>
+							</div>
+						{/each}
+					</div>
+				{/if}
+			</div>
 		</div>
 	</div>
 	<div class="sticky top-24 h-fit">

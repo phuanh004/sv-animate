@@ -18,5 +18,14 @@ export let magic: MagicComponent = {
 		filename: 'animated-gradient-text.svelte',
 		filecode: AnimatedGradientTextCode,
 		lang: 'svelte'
+	},
+	tailwind: `@theme inline {
+	--animate-gradient: gradient 6s linear infinite;
+
+	@keyframes gradient {
+		to {
+			background-position: 200% center;
+		}
 	}
+}`
 };

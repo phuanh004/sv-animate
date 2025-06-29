@@ -23,7 +23,7 @@
 		</ComponentTab>
 		<div bind:this={toc.ref} class="mt-10">
 			<SubTitle id="installation-{magic.name}">Installation</SubTitle>
-			<Desc>Copy the code below to your Svelte project to use the Words Pull Up animation.</Desc>
+			<Desc>Copy the code below to your Svelte project to use the {magic.name} animation.</Desc>
 			<div class="mb-20">
 				{#if Array.isArray(magic.code)}
 					{#each magic.code as codeItem (codeItem.filename)}

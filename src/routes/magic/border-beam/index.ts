@@ -18,5 +18,14 @@ export let magic: MagicComponent = {
 		filecode: BorderBeamCode,
 		filename: 'border-beam.svelte',
 		lang: 'svelte'
+	},
+	tailwind: `@theme inline {
+	--animate-border-beam: border-beam calc(var(--duration) * 1s) linear infinite;
+
+	@keyframes border-beam {
+		100% {
+			offset-distance: 100%;
+		}
 	}
+}	`
 };

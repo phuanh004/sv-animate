@@ -18,5 +18,26 @@ export let magic: MagicComponent = {
 		filename: 'marquee.svelte',
 		lang: 'svelte'
 	},
-  component: Marquee
+	component: Marquee,
+	tailwind: `@theme inline {
+	--animate-marquee: marquee var(--duration) linear infinite;
+	--animate-marquee-vertical: marquee-vertical var(10s, --duration) linear infinite;
+
+	@keyframes marquee {
+		from {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(calc(-100% - var(--gap)));
+		}
+	}
+	@keyframes marquee-vertical {
+		from {
+			transform: translateY(0);
+		}
+		to {
+			transform: translateY(calc(-100% - var(--gap)));
+		}
+	}
+}`
 };
