@@ -66,7 +66,7 @@
 	></div>
 </div>
 
-{#snippet Reviewcard( name:string, username:string, body:string, img:string )}
+{#snippet Reviewcard({ name, username, body, img })}
 	<figure
 		class={cn(
 			'relative w-64 cursor-pointer overflow-hidden rounded-2xl border p-4',

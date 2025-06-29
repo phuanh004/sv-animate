@@ -1,10 +1,9 @@
 <script lang="ts">
-	import { run } from 'svelte/legacy';
-
+	import { watch } from 'runed';
 	import { onMount } from 'svelte';
 
 	interface Props {
-		className?: string;
+		class?: string;
 		quantity?: number;
 		staticity?: number;
 		ease?: number;
@@ -16,7 +15,7 @@
 	}
 
 	let {
-		className = '',
+		class: className = '',
 		quantity = 100,
 		staticity = 50,
 		ease = 50,
@@ -27,6 +26,8 @@
 		vy = 0
 	}: Props = $props();
 
+	$inspect(color, 'COLOR');
+
 	let canvasRef: HTMLCanvasElement | undefined = $state(undefined);
 	let canvasContainerRef: HTMLDivElement | undefined = $state(undefined);
 	let context: CanvasRenderingContext2D | null = null;
@@ -34,6 +35,7 @@
 	let mouse = $state({ x: 0, y: 0 });
 	let canvasSize = $state({ w: 0, h: 0 });
 	const dpr = typeof window !== 'undefined' ? window.devicePixelRatio : 1;
+	let resizeTimeout = $state<number | null>(null);
 
 	function hexToRgb(hex: string): number[] {
 		hex = hex.replace('#', '');
@@ -52,7 +54,7 @@
 		return [red, green, blue];
 	}
 
-	const rgb = hexToRgb(color);
+	let rgb = hexToRgb(color);
 
 	function circleParams() {
 		const x = Math.floor(Math.random() * canvasSize.w);
@@ -180,11 +182,15 @@
 			}
 		}
 	}
-
+	const initCanvas = () => {
+		resizeCanvas();
+		drawParticles();
+	};
 	onMount(() => {
 		if (canvasRef) {
 			context = canvasRef.getContext('2d');
 			resizeCanvas();
+			// initCanvas();
 			animate();
 			window.addEventListener('resize', resizeCanvas);
 			window.addEventListener('mousemove', onMouseMove);
@@ -195,6 +201,14 @@
 			window.removeEventListener('mousemove', onMouseMove);
 		};
 	});
+	watch(
+		() => color,
+		() => {
+			rgb = hexToRgb(color);
+			animate();
+			initCanvas();
+		}
+	);
 
 	onMount(() => {
 		if (canvasRef) {

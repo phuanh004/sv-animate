@@ -1,6 +1,5 @@
 <script>
 	import BlurFade from "$lib/components/sv/magic/blur-fade/blur-fade.svelte";
-
 </script>
 
 <section id="header">

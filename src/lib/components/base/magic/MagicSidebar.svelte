@@ -149,18 +149,18 @@
 					name: 'Ripple',
 					link: '/magic/ripple'
 				},
-				{
-					name: 'Grid Pattern',
-					link: '/magic/grid-pattern'
-				},
+				// {
+				// 	name: 'Grid Pattern',
+				// 	link: '/magic/grid-pattern'
+				// },
 				// {
 				// 	name: 'Background Boxes',
 				// 	link: '/magic/bg-boxes'
 				// },
-				{
-					name: 'Retro Grid',
-					link: '/magic/retro-grid'
-				},
+				// {
+				// 	name: 'Retro Grid',
+				// 	link: '/magic/retro-grid'
+				// },
 				{
 					name: 'Flickering Grid',
 					link: '/magic/flickering-grid'

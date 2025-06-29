@@ -4,6 +4,8 @@
 	let { children }: { children?: Snippet } = $props();
 </script>
 
-<div class="relative rounded-lg border p-4 min-h-64 border-muted flex justify-center items-center">
+<div
+	class="bg-primary-foreground border-border relative flex min-h-64 w-full items-center justify-center rounded-lg border p-6"
+>
 	{@render children?.()}
 </div>

@@ -35,6 +35,6 @@
   ];
 </script>
 
-<div class="min-h-64 min-w-80 p-6 rounded-xl border bg-black z-50">
+<div class="min-h-64 min-w-80 p-6 rounded-xl border dark:bg-black z-50 ">
   <Folder name="src" files={root} expanded />
 </div>

@@ -8,7 +8,8 @@ const bundledLanguages = {
 	javascript: () => import('@shikijs/langs/javascript'),
 	json: () => import('@shikijs/langs/json'),
 	svelte: () => import('@shikijs/langs/svelte'),
-	typescript: () => import('@shikijs/langs/typescript')
+	typescript: () => import('@shikijs/langs/typescript'),
+	css: () => import('@shikijs/langs/css'),
 };
 
 /** The languages configured for the highlighter */
@@ -18,8 +19,9 @@ export type SupportedLanguage = keyof typeof bundledLanguages;
 export const highlighter = createHighlighterCore({
 	themes: [
 		import('@shikijs/themes/github-light-default'),
-		// import('@shikijs/themes/github-dark-default'),
+		import('@shikijs/themes/github-dark-default'),
 		import('@shikijs/themes/vesper'),
+		import('@shikijs/themes/aurora-x'),
 	],
 	langs: Object.entries(bundledLanguages).map(([_, lang]) => lang),
 	engine: createJavaScriptRegexEngine()

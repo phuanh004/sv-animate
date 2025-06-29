@@ -5,6 +5,6 @@
 <div class="flex min-h-40 items-center justify-center">
 	<WordRotate
 		className="text-4xl font-bold text-black dark:text-white"
-		words={['Svelte', 'Is', '🪄Vibe']}
+		words={['Svelte', 'Is', 'Vibe']}
 	/>
 </div>

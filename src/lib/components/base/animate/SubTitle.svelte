@@ -5,7 +5,7 @@
 	let {
 		children,
 		class: className = '',
-		id = crypto.randomUUID()
+		id = ''
 	}: { children: Snippet; class?: string; id?: string } = $props();
 </script>
 
