@@ -18,6 +18,7 @@ export type Code = {
 	filename: string;
 	filecode: string;
 	lang?: string;
+	isExpand?: boolean;
 };
 
 export type ExampleComponent = {

@@ -22,7 +22,7 @@
 			<PreviewComponent />
 		</ComponentTab>
 		<div bind:this={toc.ref} class="gap- mt-10 flex flex-col">
-			<SubTitle>Installation</SubTitle>
+			<SubTitle id="installation">Installation</SubTitle>
 			<Desc>Copy the code below to your Svelte project to use the Blur Fade animation.</Desc>
 			<div class="mb-20">
 				{#if Array.isArray(blur_fade.code)}
@@ -45,7 +45,7 @@
 				<div>
 					{#each blur_fade.examples as item}
 						{@const ExampleComponent = item.component}
-						<SubTitle class=" md:text-xl">{item.name}</SubTitle>
+						<SubTitle id={item.name} class=" md:text-xl">{item.name}</SubTitle>
 						<div class="mb-6">
 							<ComponentTab code={item.code} lang="svelte">
 								<ExampleComponent />

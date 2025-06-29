@@ -12,7 +12,7 @@
 
 	let {
 		words = [],
-		duration = 2500,
+		duration = 2000,
 		motionProps = {
 			initial: { opacity: 0, y: -50 },
 			animate: { opacity: 1, y: 0 },
@@ -38,13 +38,22 @@
 
 <div class="relative w-full py-2">
 	<AnimatePresence list={[{ key: index }]} let:item>
-		<Motion.h1
-			initial={{ opacity: 0, y: -50 }}
+		<!-- initial={{ opacity: 0, y: -50 }}
 			animate={{ opacity: 1, y: 0 }}
 			exit={{ opacity: 0, y: 50 }}
-			transition={{ duration: 0.25, easing: 'ease-out' }}
+			transition={{ duration: 0.25, easing: 'ease-out' }} -->
+		<Motion.h1
+			initial={motionProps.initial}
+			animate={motionProps.animate}
+			exit={motionProps.exit}
+			transition={motionProps.transition}
 		>
-			<span class={['absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2', className]}>
+			<span
+				class={[
+					'absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center gap-2',
+					className
+				]}
+			>
 				{words[item.key]}
 			</span>
 		</Motion.h1>
