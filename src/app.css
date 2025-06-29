@@ -1,11 +1,11 @@
 @import 'tailwindcss';
-
 @import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
-		--speed: 1s;
+	--speed: 1s;
+	--duration: 2s;
 	--radius: 0.625rem;
 	--background: oklch(1 0 0);
 	--foreground: oklch(0.141 0.005 285.823);
@@ -48,7 +48,6 @@
 }
 
 .dark {
-		--speed: 1s;
 	--background: oklch(0.141 0.005 285.823);
 	--foreground: oklch(0.985 0 0);
 	--card: oklch(0.21 0.006 285.885);
@@ -90,7 +89,10 @@
 }
 
 @theme inline {
-	--speed: 1s;
+	--speed: var(--speed);
+	--duration: var(--duration);
+	--gap: 1rem;
+	--pulse-color: rgba(255, 255, 255, 0.5);
 	--font-sans: 'Inter', sans-serif;
 	--radius-sm: calc(var(--radius) - 4px);
 	--radius-md: calc(var(--radius) - 2px);
@@ -130,7 +132,7 @@
 	--color-sidebar-ring: var(--sidebar-ring);
 
 	/* Rainbow Colors */
-	--color-rainbow-1: hsl(var(--color-1));
+	 --color-rainbow-1: hsl(var(--color-1));
 	--color-rainbow-2: hsl(var(--color-2));
 	--color-rainbow-3: hsl(var(--color-3));
 	--color-rainbow-4: hsl(var(--color-4));
@@ -138,7 +140,7 @@
 
 	--animate-shimmer: shimmer 2s infinite;
 	--animate-marquee: marquee var(--duration) linear infinite;
-	--animate-marquee-vertical: marquee-vertical var(10s, --duration) linear infinite;
+	--animate-marquee-vertical: marquee-vertical var(--duration, 10s) linear infinite;
 	--animate-orbit: orbit calc(var(--duration) * 1s) linear infinite;
 	--animate-border-beam: border-beam calc(var(--duration) * 1s) linear infinite;
 	--animate-meteor: meteor 5s linear infinite;
@@ -234,7 +236,8 @@
 		0% {
 			transform: translateZ(0) rotate(0);
 		}
-		15%, 35% {
+		15%,
+		35% {
 			transform: translateZ(0) rotate(90deg);
 		}
 		65%,
@@ -282,4 +285,3 @@
 		@apply bg-background text-foreground;
 	}
 }
-
