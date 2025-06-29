@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { ModeWatcher } from 'mode-watcher';
 	import '../app.css';
+	import { ModeWatcher } from 'mode-watcher';
 	import Navbar from '$lib/components/base/home/Navbar.svelte';
 
 	let { children } = $props();
 </script>
 
-<ModeWatcher defaultMode='dark' />
+<ModeWatcher defaultMode="dark" />
 <Navbar />
 {@render children()}

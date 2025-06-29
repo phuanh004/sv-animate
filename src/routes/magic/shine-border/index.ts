@@ -20,9 +20,9 @@ export let magic : MagicComponent={
   },
   component: ShineBorder,
   tailwind: `@theme inline {
-  --animate-shine-pluse: shine-pluse var(--duration) infinite linear;
+  --animate-shine-pulse: shine-pulse var(--duration) infinite linear;
 
-  @keyframes shine-pluse {
+  @keyframes shine-pulse {
 		0% {
 			background-position: 0 0;
 		}
