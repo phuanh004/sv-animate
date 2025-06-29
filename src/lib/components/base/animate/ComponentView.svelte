@@ -5,7 +5,7 @@
 </script>
 
 <div
-	class="bg-primary-foreground relative flex min-h-64 w-full items-center justify-center rounded-lg border p-4"
+	class="bg-primary-foreground border-border relative flex min-h-64 w-full items-center justify-center rounded-lg border p-6"
 >
 	{@render children?.()}
 </div>

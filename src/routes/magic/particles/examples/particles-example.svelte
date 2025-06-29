@@ -1,5 +1,18 @@
 <script>
 	import Particles from '$lib/components/sv/magic/special-effects/particles.svelte';
+	import { mode } from 'mode-watcher';
+	import { watch } from 'runed';
+	let color = $state('#ffffff');
+	watch(
+		() => mode.current,
+		() => {
+			if (mode.current === 'dark') {
+				color = '#ffffff';
+			} else {
+				color = '#000000';
+			}
+		}
+	);
 </script>
 
 <div
@@ -10,5 +23,5 @@
 	>
 		Svelte Particles
 	</span>
-	<Particles className="absolute inset-0" refresh={true} />
+	<Particles {color} class="absolute inset-0"/>
 </div>

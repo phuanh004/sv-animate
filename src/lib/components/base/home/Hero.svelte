@@ -3,12 +3,12 @@
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 </script>
 
-<main class="overflow-hidden min-h-[400vh]">
+<main>
 	<section class="relative">
 		<div class="relative py-24 lg:py-28">
 			<div class="mx-auto max-w-7xl px-6 md:px-12">
 				<div class="text-center sm:mx-auto sm:w-10/12 lg:mt-0 lg:mr-auto lg:w-4/5">
-					<a href="/" class="mx-auto flex w-fit items-center gap-2 rounded-full border p-1 pr-3">
+					<a href="/magic/blur-fade" class="mx-auto flex w-fit items-center gap-2 rounded-full border p-1 pr-3">
 						<span class="bg-muted rounded-full px-2 py-1 text-xs">New</span>
 						<span class="text-sm text-muted-foreground">Introducing New Components</span>
 						<span class="block h-4 w-px bg-(--color-border)"></span>
