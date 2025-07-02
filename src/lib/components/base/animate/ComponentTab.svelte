@@ -42,7 +42,7 @@
 			<div>
 				{#if Array.isArray(code)}
 					{#each code as codeItem (codeItem.filename)}
-						<Code.Root {lang} class="w-full" code={codeItem.filecode}>
+						<Code.Root {lang} class="w-full" code={codeItem.filecode} highlight={codeItem.highlight}>
 							<Code.CopyButton />
 							<p class="text-muted-foreground text-sm">{codeItem.filename}</p>
 						</Code.Root>
@@ -50,12 +50,12 @@
 				{:else if code}
 					{#if code.isExpand}
 						<Code.Overflow>
-							<Code.Root {lang} class="w-full" code={code.filecode}>
+							<Code.Root {lang} class="w-full" code={code.filecode} highlight={code.highlight}>
 								<Code.CopyButton />
 							</Code.Root>
 						</Code.Overflow>
 					{:else}
-						<Code.Root {lang} class="w-full" code={code.filecode}>
+						<Code.Root {lang} class="w-full" code={code.filecode} highlight={code.highlight}>
 							<Code.CopyButton />
 						</Code.Root>
 					{/if}
