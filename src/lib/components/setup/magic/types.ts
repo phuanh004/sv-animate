@@ -19,6 +19,7 @@ export type Code = {
 	filecode: string;
 	lang?: string;
 	isExpand?: boolean;
+	highlight?: (number | [number, number])[];
 };
 
 export type ExampleComponent = {

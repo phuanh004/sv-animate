@@ -28,10 +28,11 @@
 			id: 5,
 			heading: 'Components',
 			sub: [
-				// {
-				// 	name: 'Hero Video Dialog',
-				// 	link: '/magic/hero-video-dialog'
-				// },
+				{
+					name: 'Hero Video Dialog',
+					link: '/magic/hero-video-dialog',
+					isNew: true
+				},
 				{
 					name: 'Orbiting Circles',
 					link: '/magic/orbiting-circles'
@@ -55,7 +56,7 @@
 				{
 					name: 'File Tree',
 					link: '/magic/file-tree'
-				},
+				}
 				// {
 				// 	name: 'Globe',
 				// 	link: '/magic/globe'
@@ -113,10 +114,11 @@
 				// 	name: 'Cool Mode',
 				// 	link: '/magic/cool-mode'
 				// },
-				// {
-				// 	name: 'Magic Card',
-				// 	link: '/magic/magic-card'
-				// },
+				{
+					name: 'Magic Card',
+					link: '/magic/magic-card',
+					isNew: true
+				},
 				{
 					name: 'Particles',
 					link: '/magic/particles'
@@ -267,10 +269,11 @@
 					name: 'Word Rotate',
 					link: '/magic/word-rotate'
 				},
-				// {
-				// 	name: 'Sparkles Text',
-				// 	link: '/magic/sparkles-text'
-				// }
+				{
+					name: 'Sparkles Text',
+					link: '/magic/sparkles-text',
+					isNew: true
+				}
 			]
 		}
 	];
