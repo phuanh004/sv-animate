@@ -132,7 +132,7 @@
 	--color-sidebar-ring: var(--sidebar-ring);
 
 	/* Rainbow Colors */
-	 --color-rainbow-1: hsl(var(--color-1));
+	--color-rainbow-1: hsl(var(--color-1));
 	--color-rainbow-2: hsl(var(--color-2));
 	--color-rainbow-3: hsl(var(--color-3));
 	--color-rainbow-4: hsl(var(--color-4));
@@ -152,6 +152,8 @@
 	--animate-gradient: gradient 6s linear infinite;
 	--animate-rainbow: rainbow var(--speed, 6s) linear infinite;
 	--animate-pulse: pulse var(--duration) ease-out infinite;
+	--animate-aurora: aurora 8s ease-in-out infinite alternate;
+	--animate-line-shadow: line-shadow 15s linear infinite;
 
 	/* All Magic UI keyframes  */
 	@keyframes shimmer {
@@ -273,6 +275,37 @@
 		}
 		50% {
 			box-shadow: 0 0 0 8px var(--pulse-color, rgba(255, 255, 255, 0));
+		}
+	}
+
+	@keyframes aurora {
+		0% {
+			background-position: 0% 50%;
+			transform: rotate(-5deg) scale(0.9);
+		}
+		25% {
+			background-position: 50% 100%;
+			transform: rotate(5deg) scale(1.1);
+		}
+		50% {
+			background-position: 100% 50%;
+			transform: rotate(-3deg) scale(0.95);
+		}
+		75% {
+			background-position: 50% 0%;
+			transform: rotate(3deg) scale(1.05);
+		}
+		100% {
+			background-position: 0% 50%;
+			transform: rotate(-5deg) scale(0.9);
+		}
+	}
+	@keyframes line-shadow {
+		0% {
+			background-position: 0 0;
+		}
+		100% {
+			background-position: 100% -100%;
 		}
 	}
 }

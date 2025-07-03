@@ -43,24 +43,26 @@
 		endYOffset = 0
 	}: Props = $props();
 
-	let id = crypto.randomUUID().slice(0, 8);
+	let id = $props.id();
 	let pathD = $state('');
 	let svgDimensions = $state({ width: 0, height: 0 });
 
 	// Calculate the gradient coordinates based on the reverse prop
-	let gradientCoordinates = reverse
-		? {
-				x1: ['90%', '-10%'],
-				x2: ['100%', '0%'],
-				y1: ['0%', '0%'],
-				y2: ['0%', '0%']
-			}
-		: {
-				x1: ['10%', '110%'],
-				x2: ['0%', '100%'],
-				y1: ['0%', '0%'],
-				y2: ['0%', '0%']
-			};
+	let gradientCoordinates = $derived(
+		reverse
+			? {
+					x1: ['90%', '-10%'],
+					x2: ['100%', '0%'],
+					y1: ['0%', '0%'],
+					y2: ['0%', '0%']
+				}
+			: {
+					x1: ['10%', '110%'],
+					x2: ['0%', '100%'],
+					y1: ['0%', '0%'],
+					y2: ['0%', '0%']
+				}
+	);
 
 	let updatePath = () => {
 		let containerRect = containerRef?.getBoundingClientRect();
@@ -82,8 +84,8 @@
 		pathD = d;
 	};
 	onMount(async () => {
+		// updatePath();
 		await tick().then(() => {
-			updatePath();
 			const resizeObserver = new ResizeObserver((entries) => {
 				// For all entries, recalculate the path
 				for (let entry of entries) {
@@ -145,11 +147,15 @@
 			}}
 			gradientUnits="userSpaceOnUse"
 			class="transform-gpu"
+			isSvg
+			{id}
 		>
+			<!-- <linearGradient {id} gradientUnits="userSpaceOnUse" class="transform-gpu"> -->
 			<stop stop-color={gradientStartColor} stop-opacity="0"></stop>
 			<stop stop-color={gradientStartColor}></stop>
 			<stop offset="32.5%" stop-color={gradientStopColor}></stop>
 			<stop offset="100%" stop-color={gradientStopColor} stop-opacity="0"></stop>
+			<!-- </linearGradient> -->
 		</M.linearGradient>
 	</defs>
 </svg>

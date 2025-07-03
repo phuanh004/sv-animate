@@ -58,5 +58,5 @@
 		</div>
 	</div>
 
-	<AnimatedBeam duration={3} bind:containerRef bind:fromRef={div1Ref} bind:toRef={div2Ref} />
+	<AnimatedBeam gradientStartColor="#03D1FF"  gradientStopColor="#00FFCC" duration={3} bind:containerRef bind:fromRef={div1Ref} bind:toRef={div2Ref} />
 </div>
