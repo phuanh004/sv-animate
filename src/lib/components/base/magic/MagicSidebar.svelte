@@ -76,7 +76,7 @@
 					name: 'Dock Menu',
 					link: '/magic/dock',
 					isNew: true
-				},
+				}
 				// {
 				// 	name: 'Circular Progress Bar',
 				// 	link: '/magic/circular-progress-bar'
@@ -183,7 +183,11 @@
 				{
 					name: 'Flickering Grid',
 					link: '/magic/flickering-grid'
-				}
+				},
+				// {
+				// 	name: 'Animated Grid Pattern',
+				// 	link: '/magic/animated-grid-pattern'
+				// },
 			]
 		},
 		{
@@ -213,7 +217,12 @@
 				{
 					name: 'Interactive Hover',
 					link: '/magic/interactive-hover'
-				}
+				},
+				// {
+				// 	name:'Shinny Button',
+				// 	link: '/magic/shinny-button',
+				// 	isNew: true
+				// }
 			]
 		},
 		{
@@ -222,11 +231,13 @@
 			sub: [
 				{
 					name: 'Aurora Text',
-					link: '/magic/aurora-text'
+					link: '/magic/aurora-text',
+					isNew: true
 				},
 				{
 					name: 'Line Shadow Text',
-					link: '/magic/line-shadow-text'
+					link: '/magic/line-shadow-text',
+					isNew: true
 				},
 				{
 					name: 'Video Text',
@@ -269,11 +280,6 @@
 				// {
 				// 	name: 'Spinning Text',
 				// 	link: '/magic/spinning-text'
-				// },
-				// {
-				// 	name: 'Video Text',
-				// 	link: '/magic/video-text',
-				// 	isNew: true
 				// },
 				// {
 				// 	name: 'Smooth Cursor',

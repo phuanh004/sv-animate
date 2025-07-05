@@ -100,6 +100,6 @@
 				</svg>
 			</Motion.span>
 		{/each}
-		<strong>{text}</strong>
+		<span>{text}</span>
 	</span>
 </div>

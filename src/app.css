@@ -152,6 +152,7 @@
 	--animate-gradient: gradient 6s linear infinite;
 	--animate-rainbow: rainbow var(--speed, 6s) linear infinite;
 	--animate-pulse: pulse var(--duration) ease-out infinite;
+
 	--animate-aurora: aurora 8s ease-in-out infinite alternate;
 	--animate-line-shadow: line-shadow 15s linear infinite;
 	--animate-background-position-spin: background-position-spin 3000ms infinite alternate;
