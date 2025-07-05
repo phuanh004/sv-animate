@@ -19,5 +19,19 @@ export let magic: MagicComponent = {
     filename: 'NeonGradientCard.svelte',
     filecode: NeonGradientCardCode,
     lang: 'svelte'
+  },
+  tailwind:`@theme inline {
+  --animate-background-position-spin: background-position-spin 3000ms infinite
+    alternate;
+
+  @keyframes background-position-spin {
+    0% {
+      background-position: top center;
+    }
+    100% {
+      background-position: bottom center;
+    }
   }
+}
+`
 }

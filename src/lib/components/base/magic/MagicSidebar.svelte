@@ -184,14 +184,10 @@
 					name: 'Flickering Grid',
 					link: '/magic/flickering-grid'
 				},
-				{
-					name: 'Animated Grid Pattern',
-					link: '/magic/animated-grid-pattern'
-				},
-				{
-					name: 'Ripple',
-					link: '/magic/ripple'
-				}
+				// {
+				// 	name: 'Animated Grid Pattern',
+				// 	link: '/magic/animated-grid-pattern'
+				// },
 			]
 		},
 		{
@@ -206,14 +202,14 @@
 					name: 'Pulsating Button',
 					link: '/magic/pulsating-button'
 				},
-				{
-					name: 'Animated Subscribe',
-					link: '/magic/animated-subscribe'
-				},
-				{
-					name: 'Ripple Button',
-					link: '/magic/ripple-button'
-				},
+				// {
+				// 	name: 'Animated Subscribe',
+				// 	link: '/magic/animated-subscribe'
+				// },
+				// {
+				// 	name: 'Ripple Button',
+				// 	link: '/magic/ripple-button'
+				// },
 				{
 					name: 'Rainbow',
 					link: '/magic/rainbow'
@@ -222,11 +218,11 @@
 					name: 'Interactive Hover',
 					link: '/magic/interactive-hover'
 				},
-				{
-					name:'Shinny Button',
-					link: '/magic/shinny-button',
-					isNew: true
-				}
+				// {
+				// 	name:'Shinny Button',
+				// 	link: '/magic/shinny-button',
+				// 	isNew: true
+				// }
 			]
 		},
 		{

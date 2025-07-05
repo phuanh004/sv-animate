@@ -2,6 +2,7 @@
 	import { cn } from '$lib/utils';
 	import { onMount, tick } from 'svelte';
 	import { M } from 'motion-start';
+	import { watch } from 'runed';
 
 	interface Props {
 		class?: any;
@@ -43,7 +44,7 @@
 		endYOffset = 0
 	}: Props = $props();
 
-	let id = $props.id();
+	let id = 'gradient';
 	let pathD = $state('');
 	let svgDimensions = $state({ width: 0, height: 0 });
 
@@ -65,10 +66,11 @@
 	);
 
 	let updatePath = () => {
+		if (!containerRef || !fromRef || !toRef) return;
 		let containerRect = containerRef?.getBoundingClientRect();
 		let rectA = fromRef?.getBoundingClientRect();
 		let rectB = toRef?.getBoundingClientRect();
-
+		console.log(containerRect, rectA, rectB, 'Maths');
 		let svgWidth = containerRect.width;
 		let svgHeight = containerRect.height;
 		svgDimensions.width = svgWidth;
@@ -83,21 +85,28 @@
 		let d = `M ${startX},${startY} Q ${(startX + endX) / 2},${controlY} ${endX},${endY}`;
 		pathD = d;
 	};
-	onMount(async () => {
-		await tick().then(() => {
-			const resizeObserver = new ResizeObserver((entries) => {
-				// For all entries, recalculate the path
-				for (let entry of entries) {
-					updatePath();
-				}
-			});
+	let init = () => {
+		updatePath();
 
-			// Observe the container element
-			if (containerRef) {
-				resizeObserver.observe(containerRef);
+		const resizeObserver = new ResizeObserver((entries) => {
+			// For all entries, recalculate the path
+			for (let entry of entries) {
+				updatePath();
 			}
 		});
+
+		// Observe the container element
+		if (containerRef) {
+			resizeObserver.observe(containerRef);
+		}
+
+		// Call the updatePath initially to set the initial path
+	};
+	onMount(async () => {
+		await tick();
+		init();
 	});
+
 </script>
 
 <svg
@@ -123,8 +132,10 @@
 		stroke-linecap="round"
 	/>
 	<defs>
-		<!-- <M.linearGradient /> -->
 		<M.linearGradient
+			class="transform-gpu"
+			{id}
+			gradientUnits={'userSpaceOnUse'}
 			initial={{
 				x1: '0%',
 				x2: '0%',
@@ -144,17 +155,11 @@
 				repeat: Infinity,
 				repeatDelay: 0
 			}}
-			gradientUnits="userSpaceOnUse"
-			class="transform-gpu"
-			isSvg
-			{id}
 		>
-			<!-- <linearGradient {id} gradientUnits="userSpaceOnUse" class="transform-gpu"> -->
 			<stop stop-color={gradientStartColor} stop-opacity="0"></stop>
 			<stop stop-color={gradientStartColor}></stop>
 			<stop offset="32.5%" stop-color={gradientStopColor}></stop>
 			<stop offset="100%" stop-color={gradientStopColor} stop-opacity="0"></stop>
-			<!-- </linearGradient> -->
 		</M.linearGradient>
 	</defs>
 </svg>
