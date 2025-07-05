@@ -38,6 +38,11 @@
 					link: '/magic/orbiting-circles'
 				},
 				{
+					name: 'Terminal',
+					link: '/magic/terminal',
+					isNew: true
+				},
+				{
 					name: 'Marquee',
 					link: '/magic/marquee'
 				},
@@ -49,22 +54,29 @@
 				// 	name: 'Simple Cards',
 				// 	link: '/magic/simple-cards'
 				// },
-				// {
-				// 	name: 'Animated Beam',
-				// 	link: '/magic/animated-beam'
-				// },
+				{
+					name: 'Animated Beam',
+					link: '/magic/animated-beam',
+					isNew: true
+				},
+				{
+					name: 'Lens',
+					link: '/magic/lens',
+					isNew: true
+				},
 				{
 					name: 'File Tree',
 					link: '/magic/file-tree'
-				}
+				},
 				// {
 				// 	name: 'Globe',
 				// 	link: '/magic/globe'
 				// },
-				// {
-				// 	name: 'Dock Menu',
-				// 	link: '/magic/dock'
-				// },
+				{
+					name: 'Dock Menu',
+					link: '/magic/dock',
+					isNew: true
+				},
 				// {
 				// 	name: 'Circular Progress Bar',
 				// 	link: '/magic/circular-progress-bar'
@@ -110,6 +122,11 @@
 					name: 'Shine Border',
 					link: '/magic/shine-border'
 				},
+				{
+					name: 'Neon Gradient Card',
+					link: '/magic/neon-gradient-card',
+					isNew: true
+				},
 				// {
 				// 	name: 'Cool Mode',
 				// 	link: '/magic/cool-mode'
@@ -151,18 +168,18 @@
 					name: 'Ripple',
 					link: '/magic/ripple'
 				},
-				// {
-				// 	name: 'Grid Pattern',
-				// 	link: '/magic/grid-pattern'
-				// },
+				{
+					name: 'Grid Pattern',
+					link: '/magic/grid-pattern'
+				},
 				// {
 				// 	name: 'Background Boxes',
 				// 	link: '/magic/bg-boxes'
 				// },
-				// {
-				// 	name: 'Retro Grid',
-				// 	link: '/magic/retro-grid'
-				// },
+				{
+					name: 'Retro Grid',
+					link: '/magic/retro-grid'
+				},
 				{
 					name: 'Flickering Grid',
 					link: '/magic/flickering-grid'
@@ -203,10 +220,24 @@
 			id: 4,
 			heading: 'Text Animations',
 			sub: [
-				// {
-				// 	name: 'Aurora Text',
-				// 	link: '/magic/aurora-text'
-				// },
+				{
+					name: 'Aurora Text',
+					link: '/magic/aurora-text'
+				},
+				{
+					name: 'Line Shadow Text',
+					link: '/magic/line-shadow-text'
+				},
+				{
+					name: 'Video Text',
+					link: '/magic/video-text',
+					isNew: true
+				},
+				{
+					name: 'Typing Animation',
+					link: '/magic/typing-animation',
+					isNew: true
+				},
 				// {
 				// 	name: 'Text Reveal',
 				// 	link: '/magic/text-reveal'

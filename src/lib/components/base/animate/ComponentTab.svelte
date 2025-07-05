@@ -6,6 +6,7 @@
 	import type { SupportedLanguage } from './codeblock/shiki';
 	import type { Code as MagicCode } from '$lib/components/setup/magic/types.js';
 	import { fade, scale } from 'svelte/transition';
+	import MultipleCode from './codeblock/multiple-code.svelte';
 	let {
 		code,
 		children,
@@ -41,12 +42,13 @@
 			<!-- in:scale={{ start: 0.98, opacity: 0.8, duration: 260 }} -->
 			<div>
 				{#if Array.isArray(code)}
-					{#each code as codeItem (codeItem.filename)}
+					<!-- {#each code as codeItem (codeItem.filename)}
+
 						<Code.Root {lang} class="w-full" code={codeItem.filecode} highlight={codeItem.highlight}>
 							<Code.CopyButton />
-							<p class="text-muted-foreground text-sm">{codeItem.filename}</p>
 						</Code.Root>
-					{/each}
+					{/each} -->
+					<MultipleCode {code} />
 				{:else if code}
 					{#if code.isExpand}
 						<Code.Overflow>

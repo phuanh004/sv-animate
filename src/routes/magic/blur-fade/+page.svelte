@@ -12,6 +12,17 @@
 	let PreviewComponent = blur_fade.previewComp;
 </script>
 
+<svelte:head>
+	<title>{blur_fade.name} - Svelte Magic UI</title>
+	<meta name="description" content={blur_fade.desc} />
+	<meta property="og:title" content="{blur_fade.name} - Svelte Magic UI" />
+	<meta property="og:description" content={blur_fade.desc} />
+	<meta property="og:type" content="website" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="{blur_fade.name} - Svelte Magic UI" />
+	<meta name="twitter:description" content={blur_fade.desc} />
+</svelte:head>
+
 <div class="relative flex md:gap-8">
 	<div class="flex grow flex-col">
 		<Title>{blur_fade.name}</Title>

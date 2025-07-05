@@ -6,5 +6,3 @@
 	<AnimatedBeamExample />
 </div>
 
-<style>
-</style>
