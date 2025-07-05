@@ -154,6 +154,8 @@
 	--animate-pulse: pulse var(--duration) ease-out infinite;
 	--animate-aurora: aurora 8s ease-in-out infinite alternate;
 	--animate-line-shadow: line-shadow 15s linear infinite;
+	--animate-background-position-spin: background-position-spin 3000ms infinite
+    alternate;
 
 	/* All Magic UI keyframes  */
 	@keyframes shimmer {
@@ -308,6 +310,14 @@
 			background-position: 100% -100%;
 		}
 	}
+	@keyframes background-position-spin {
+    0% {
+      background-position: top center;
+    }
+    100% {
+      background-position: bottom center;
+    }
+  }
 }
 
 @layer base {
