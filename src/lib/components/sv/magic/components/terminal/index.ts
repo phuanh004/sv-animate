@@ -1,5 +1,5 @@
-import AnimatedSpan from './animate-span.svelte';
+import AnimatedSpan from './animated-span.svelte';
 import Terminal from './terminal.svelte';
-import TypingAnimation from './typing-animaton.svelte';
+import TypingAnimation from './typing-animation.svelte';
 
 export { AnimatedSpan, Terminal, TypingAnimation };

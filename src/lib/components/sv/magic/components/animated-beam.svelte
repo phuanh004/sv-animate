@@ -84,7 +84,6 @@
 		pathD = d;
 	};
 	onMount(async () => {
-		// updatePath();
 		await tick().then(() => {
 			const resizeObserver = new ResizeObserver((entries) => {
 				// For all entries, recalculate the path
