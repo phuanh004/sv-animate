@@ -12,6 +12,17 @@
 	let PreviewComponent = magic.previewComp;
 </script>
 
+<svelte:head>
+	<title>{magic.name} - Svelte Magic UI</title>
+	<meta name="description" content={magic.desc} />
+	<meta property="og:title" content="{magic.name} - Svelte Magic UI" />
+	<meta property="og:description" content={magic.desc} />
+	<meta property="og:type" content="website" />
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="{magic.name} - Svelte Magic UI" />
+	<meta name="twitter:description" content={magic.desc} />
+</svelte:head>
+
 <div class="grid grid-cols-1 gap-6 md:grid-cols-7">
 	<div class="col-span-1 md:col-span-6">
 		<Title>{magic.name}</Title>

@@ -57,6 +57,8 @@
 	:global(pre.shiki:not([data-code-overflow] *):not([data-code-overflow])) {
 		@apply overflow-y-auto;
 		max-height: min(100%, 650px);
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none;
 	}
 
 	:global(pre.shiki code) {

@@ -6,7 +6,7 @@
 		lensSize?: number;
 		isStatic?: boolean;
 		position?: any;
-		hovering: boolean;
+		hovering?: boolean;
 		children?: import('svelte').Snippet;
 	}
 
@@ -15,7 +15,7 @@
 		lensSize = 170,
 		isStatic = false,
 		position = $bindable({ x: 200, y: 150 }),
-		hovering = $bindable(),
+		hovering = $bindable(false),
 		children
 	}: Props = $props();
 
