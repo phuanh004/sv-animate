@@ -5,7 +5,7 @@
     "type": "repo",
     "description": "Svelte 5 Animations Components ",
     "docsRepoUrl": "https://github.com/sikandarjodd/sv-animate",
-    "folders": [],
+    "folders": ["docs"],
     "excludeFolders": [
       "archive",
       "archived",
